@@ -22,7 +22,7 @@ describe('index', () => {
 
   it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
-
+    console.log("YAY!")
     jsdom.env(html, [src], {
       virtualConsole: jsdom.createVirtualConsole().sendTo(console)
     }, (err, window) => {
